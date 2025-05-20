@@ -5,5 +5,11 @@ export const PostList = ({ posts }) => {
     return null;
   }
 
-  return posts.map(post => <PostInfo post={post} key={post.id} />);
+  return (
+    <div className="PostList">
+      {posts.map(post => (
+        <PostInfo post={post} key={post.id} />
+      ))}
+    </div>
+  );
 };
